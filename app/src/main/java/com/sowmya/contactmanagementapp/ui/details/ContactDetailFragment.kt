@@ -62,7 +62,9 @@ class ContactDetailFragment : Fragment() {
         binding.btnFavorite.setOnClickListener { toggleFavorite() }
         binding.btnDelete.setOnClickListener { deleteContact() }
         binding.btnEdit.setOnClickListener { navigateToEdit() }
+        binding.btnShare.setOnClickListener { shareContact() }
     }
+
 
     private fun navigateToEdit() {
         val fragment = EditContactFragment.newInstance(contactId)
@@ -131,6 +133,21 @@ class ContactDetailFragment : Fragment() {
             viewModel.delete(it)
             Toast.makeText(context, "Contact Deleted", Toast.LENGTH_SHORT).show()
             parentFragmentManager.popBackStack()
+        }
+    }
+
+    private fun shareContact() {
+        currentContact?.let { contact ->
+            val fragment = QRShareFragment()
+            val args = Bundle().apply {
+                putSerializable("contact", contact)
+            }
+            fragment.arguments = args
+            
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, fragment)
+                .addToBackStack(null)
+                .commit()
         }
     }
 

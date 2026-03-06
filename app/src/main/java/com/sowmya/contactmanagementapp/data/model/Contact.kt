@@ -2,6 +2,7 @@ package com.sowmya.contactmanagementapp.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 @Entity(tableName = "contacts")
 data class Contact(
@@ -12,4 +13,5 @@ data class Contact(
     val email: String,
     val imagePath: String? = null,
     val isFavorite: Boolean = false
-)
+) : Serializable
+

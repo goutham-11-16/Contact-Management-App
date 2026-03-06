@@ -13,3 +13,16 @@
 .externalNativeBuild
 .cxx
 local.properties
+build_log.txt
+build_log_deep.txt
+build_log_deep_2.txt
+build_log_deep_3.txt
+build_log_deep_check.txt
+build_log_deep_utf8.txt
+build_log_final.txt
+build_log_final_check.txt
+build_log_final_fix.txt
+build_log_final_verif.txt
+build_log_full.txt
+build_output_no_daemon.log
+build_output_info.log

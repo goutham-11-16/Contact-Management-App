@@ -1,21 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ContactManagementApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.ContactManagementApp" parent="Theme.Material3.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="colorPrimaryContainer">@color/primaryLightColor</item>
-        <item name="colorOnPrimaryContainer">@color/primaryDarkColor</item>
+        <item name="colorPrimaryContainer">@color/primaryDark</item>
         
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/secondaryColor</item>
         <item name="colorOnSecondary">@color/white</item>
-        <item name="colorSecondaryContainer">@color/secondaryLightColor</item>
-        <item name="colorOnSecondaryContainer">@color/secondaryDarkColor</item>
         
         <!-- Status bar color. -->
-        <item name="android:statusBarColor">@color/backgroundColor</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/primaryColor</item>
+        <item name="android:windowLightStatusBar">false</item>
         
         <!-- Background and Surface colors. -->
         <item name="android:windowBackground">@color/backgroundColor</item>
@@ -24,13 +21,19 @@
     </style>
 
     <style name="RoundedCard" parent="Widget.Material3.CardView.Elevated">
-        <item name="cardCornerRadius">16dp</item>
-        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">2dp</item>
         <item name="cardBackgroundColor">@color/surfaceColor</item>
     </style>
     
     <style name="HeaderTitle" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textColor">@color/primaryColor</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="CircleImage">
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

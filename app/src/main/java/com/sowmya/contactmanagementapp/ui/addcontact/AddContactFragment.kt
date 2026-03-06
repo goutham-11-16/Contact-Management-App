@@ -24,6 +24,18 @@ class AddContactFragment : Fragment() {
         }
     }
 
+    companion object {
+        private const val ARG_SCANNED_CONTACT = "scanned_contact"
+
+        fun newInstance(contact: Contact): AddContactFragment {
+            val fragment = AddContactFragment()
+            val args = Bundle()
+            args.putSerializable(ARG_SCANNED_CONTACT, contact)
+            fragment.arguments = args
+            return fragment
+        }
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         _binding = FragmentAddContactBinding.inflate(inflater, container, false)
         return binding.root
@@ -31,6 +43,13 @@ class AddContactFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val scannedContact = arguments?.getSerializable(ARG_SCANNED_CONTACT) as? Contact
+        scannedContact?.let {
+            binding.etName.setText(it.name)
+            binding.etPhone.setText(it.phone)
+            binding.etEmail.setText(it.email)
+        }
 
         binding.ivProfile.setOnClickListener {
             pickImage.launch("image/*")
@@ -40,6 +59,7 @@ class AddContactFragment : Fragment() {
             saveContact()
         }
     }
+
 
     private fun saveContact() {
         val name = binding.etName.text.toString().trim()

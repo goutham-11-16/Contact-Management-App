@@ -31,6 +31,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+    java {
+        toolchain {
+            languageVersion.set(JavaLanguageVersion.of(21))
+        }
+    }
+
     kotlin {
         compilerOptions {
             jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
@@ -64,6 +70,14 @@ dependencies {
     // Glide
     implementation(libs.glide)
     ksp(libs.glide.compiler)
+
+    // QR & Camera
+    implementation(libs.zxing.core)
+    implementation(libs.zxing.android)
+    
+    // Animations
+    implementation(libs.lottie)
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

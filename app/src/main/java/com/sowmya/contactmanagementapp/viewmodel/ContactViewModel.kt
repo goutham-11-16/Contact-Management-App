@@ -36,4 +36,9 @@ class ContactViewModel(application: Application) : AndroidViewModel(application)
     suspend fun getContactById(id: Int): Contact? {
         return repository.getContactById(id)
     }
+
+    fun deleteAll() = viewModelScope.launch {
+        repository.deleteAll()
+    }
 }
+
