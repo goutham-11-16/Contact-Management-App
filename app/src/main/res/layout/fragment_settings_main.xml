@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:text="Settings"
+            android:textColor="@color/oneplus_text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Settings Items -->
+        <include
+            android:id="@+id/item_speed_dial"
+            layout="@layout/item_settings_row" />
+        
+        <include
+            android:id="@+id/item_answer_end_calls"
+            layout="@layout/item_settings_row" />
+
+        <include
+            android:id="@+id/item_call_recording"
+            layout="@layout/item_settings_row" />
+
+        <include
+            android:id="@+id/item_block_filter"
+            layout="@layout/item_settings_row" />
+
+        <include
+            android:id="@+id/item_more_settings"
+            layout="@layout/item_settings_row" />
+
+        <include
+            android:id="@+id/item_edge_lighting"
+            layout="@layout/item_settings_row" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

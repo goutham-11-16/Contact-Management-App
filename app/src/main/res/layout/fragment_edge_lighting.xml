@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp"
+            android:text="Edge lighting"
+            android:textColor="@color/oneplus_text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:text="When the screen is off, the edge of the screen will light up when you receive an incoming call."
+            android:textColor="@color/oneplus_text_secondary"
+            android:textSize="14sp" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switch_edge_lighting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="8dp"
+            android:text="Turn on Edge lighting"
+            android:textColor="@color/oneplus_text_primary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp"
+            android:text="Choose Color"
+            android:textColor="@color/oneplus_text_secondary"
+            android:textSize="12sp"
+            android:textAllCaps="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            
+            <View android:layout_width="40dp" android:layout_height="40dp" android:background="@color/oneplus_red" android:layout_margin="8dp" />
+            <View android:layout_width="40dp" android:layout_height="40dp" android:background="#00BFFF" android:layout_margin="8dp" />
+            <View android:layout_width="40dp" android:layout_height="40dp" android:background="#32CD32" android:layout_margin="8dp" />
+            <View android:layout_width="40dp" android:layout_height="40dp" android:background="#FFD700" android:layout_margin="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
